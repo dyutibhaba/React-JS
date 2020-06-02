@@ -8,20 +8,21 @@ class Review extends Component {
 
     this.state = {
       name: '',
-      gender: '',
-      age: '',
+      queryResult: ''
     };
   }
 
   componentWillMount() {
     const { steps } = this.props;
-    const { name, gender, age } = steps;
-
-    this.setState({ name, gender, age });
+    const { name, queryResult } = steps;
+    this.state.queryResult = 'Welcome';
+    this.setState({ 
+      name, 
+      queryResult: 'Welcome'});
   }
 
   render() {
-    const { name, gender, age } = this.state;
+    const { name, queryResult } = this.state;
     return (
       <div style={{ width: '100%' }}>
         
@@ -33,13 +34,10 @@ class Review extends Component {
               <td>{name.value}</td>
             </tr>
             <tr>
-              <td>Gender</td>
-              <td>{gender.value}</td>
+              <td>QResult</td>
+              <td>{queryResult}</td>
             </tr>
-            <tr>
-              <td>Age</td>
-              <td>{age.value}</td>
-            </tr>
+            
           </tbody>
         </table>
       </div>

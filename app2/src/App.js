@@ -5,7 +5,8 @@ import {Greet} from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Message from './components/Message';
-import Counter from './components/Counter'
+import Counter from './components/Counter';
+import PlayIntArray from './components/PlayIntArray';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
       <Welcome name="Piotr" fuelType="Oil"/> */}
       {/* <Hello/> */}
       {/* <Message /> */}
-      <Counter />
+      {/* <Counter /> */}
+      
+      <PlayIntArray/>
     </div>
   );
 }
